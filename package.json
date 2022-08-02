@@ -1,0 +1,17 @@
+{
+  "name": "vite-template",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "stylelint": "stylelint --ignore-path .gitignore \"src/**/*.+(css|scss)\"",
+    "stylelintfix": "npm run stylelint -- --fix",
+    "format": "prettier --write \"**/*.+(js|json|yml|scss|css)\""
+  },
+  "devDependencies": {
+    "vite": "^3.0.0"
+  }
+}
