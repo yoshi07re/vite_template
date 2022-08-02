@@ -32,7 +32,6 @@ export default defineConfig({
   },
   input: {
     index: resolve(__dirname, "./src/index.html"),
-    side: resolve(__dirname, "./src/indexSide.html"),
   },
   plugins: [
     handlebars({
