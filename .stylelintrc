@@ -1,0 +1,34 @@
+plugins: stylelint-prettier
+extends:
+  - stylelint-config-standard
+  - stylelint-config-recommended-scss
+  - stylelint-config-recess-order
+  - stylelint-config-html
+  - stylelint-config-prettier
+# overrides:
+#   - files:
+#       - 'src/**/*.{ts,tsx}'
+#     customSyntax: '@stylelint/postcss-css-in-js'
+ignoreFiles: 
+  - './src/style/scss/*.scss'
+rules:
+  at-rule-no-unknown:
+    - true
+    - ignoreAtRules:
+      - include
+      - mixin
+      - forward
+      - use
+      - extend
+  property-no-unknown:
+    - true
+    - ignoreProperties:
+      - composes
+  no-invalid-double-slash-comments:
+    - null
+  selector-class-pattern:
+    - null
+  no-descending-specificity:
+    - null
+  no-irregular-whitespace:
+    - null

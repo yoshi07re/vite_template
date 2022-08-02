@@ -1,0 +1,77 @@
+@use "./variable" as f-variable;
+
+// media query
+// ============================================
+@mixin mq($breakpoint) {
+  @if map-has-key(f-variable.$breakpoints, $breakpoint) {
+    @media screen and #{inspect(map-get(f-variable.$breakpoints, $breakpoint))} {
+      @content;
+    }
+  } @else {
+    @error "指定されたブレークポイントは定義されていません。"+"指定できるブレークポイントは次のとおりです。 -> #{map-keys($breakpoints)}";
+  }
+}
+
+// min-width用
+@mixin mq--min($breakpoint--min) {
+  @if map-has-key(f-variable.$breakpoints--min, $breakpoint--min) {
+    @media screen and #{inspect(map-get(f-variable.$breakpoints--min, $breakpoint--min))} {
+      @content;
+    }
+  } @else {
+    @error "指定されたブレークポイントは定義されていません。"+"指定できるブレークポイントは次のとおりです。 -> #{map-keys($breakpoints--min)}";
+  }
+}
+
+//  column
+// ============================================
+@mixin column($gap-num, $mt-num) {
+  width: calc(100% + #{$gap-num});
+  margin-top: -$mt-num;
+  margin-left: -$gap-num;
+}
+
+@mixin columnlist($gap-num, $column-num, $mt-num) {
+  width: calc((100% - #{$gap-num} * #{$column-num}) / #{$column-num});
+  margin-top: $mt-num;
+  margin-left: $gap-num;
+}
+
+//  object-fit
+// ============================================
+@mixin object-fit($value: fill, $position: null) {
+  object-fit: $value;
+
+  @if $position {
+    object-position: $position;
+    font-family: "object-fit: #{$value}; object-position: #{$position}", sans-serif;
+  } @else {
+    font-family: "object-fit: #{$value}", sans-serif;
+  }
+}
+
+//  aspect-ratio
+// ============================================
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+
+  &::before {
+    content: "";
+    float: left;
+    padding-top: ($height / $width) * 100%;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  & > :first-child {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}
