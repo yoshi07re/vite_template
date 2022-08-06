@@ -11,6 +11,9 @@ extends:
 #     customSyntax: '@stylelint/postcss-css-in-js'
 ignoreFiles: 
   - './src/style/scss/*.scss'
+  - './src/style/mixin/*.scss'
+  - './src/style/functions/*.scss'
+  - './src/style/bariable/*.scss'
 rules:
   at-rule-no-unknown:
     - true
