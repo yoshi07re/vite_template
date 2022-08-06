@@ -10,10 +10,10 @@ extends:
 #       - 'src/**/*.{ts,tsx}'
 #     customSyntax: '@stylelint/postcss-css-in-js'
 ignoreFiles: 
-  - './src/style/scss/*.scss'
-  - './src/style/mixin/*.scss'
-  - './src/style/functions/*.scss'
-  - './src/style/bariable/*.scss'
+  - './src/style/global/*.scss'
+  - './src/style/global/mixin/*.scss'
+  - './src/style/global/functions/*.scss'
+  - './src/style/global/bariable/*.scss'
 rules:
   at-rule-no-unknown:
     - true
