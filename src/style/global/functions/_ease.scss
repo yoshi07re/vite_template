@@ -1,6 +1,8 @@
+@use "../variable" as f-variable;
+
 @function ease($easing) {
-  @if map-has-key($easings, $easing) {
-    @return map-get($easings, $easing);
+  @if map-has-key(f-variable.$easings, $easing) {
+    @return map-get(f-variable.$easings, $easing);
   }
 
   // 定義されていないイージングが指定された時は警告を出して初期値のeaseを返す
