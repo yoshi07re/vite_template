@@ -9,3 +9,8 @@
   @warn 'イージング"#{$easing}"は定義されていません';
   @return ease;
 }
+
+// 使い方
+// .hoge {
+//   animation: animation-hoge 1s ease(out-expo) .4s both;
+// }

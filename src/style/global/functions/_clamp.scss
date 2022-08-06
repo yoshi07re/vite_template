@@ -6,3 +6,8 @@
   $return-value: clamp(#{$size-at-min-width}, #{$y-axis-intersection} + #{$slope} * 100vw, #{$size-at-max-width});
   @return $return-value;
 }
+
+// 使い方
+// .hoge {
+//   font-size: clamp-calc(480px, 640px, 12px, 16px);
+// }

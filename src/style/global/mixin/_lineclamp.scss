@@ -19,3 +19,9 @@
     overflow: hidden;
   }
 }
+
+// 使い方
+// 1行の場合
+// .hoge {
+//   @include line-clamp(1);
+// }

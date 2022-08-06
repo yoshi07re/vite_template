@@ -12,3 +12,14 @@
     font-family: "object-fit: #{$value}", sans-serif;
   }
 }
+
+// 使い方
+// .image {
+//   &.-image1 {
+//     @include object-fit(cover);
+//   }
+
+//   &.-image2 {
+//     @include object-fit(contain, top center);
+//   }
+// }
