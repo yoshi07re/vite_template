@@ -1,6 +1,9 @@
 // breakpoints
 // ============================================
 $breakpoints: (
+  "x": (
+    max-width: 375px,
+  ),
   "xs": (
     max-width: 460px,
   ),
@@ -19,6 +22,9 @@ $breakpoints: (
 ) !default;
 
 $breakpoints--min: (
+  "x": (
+    max-width: 376px,
+  ),
   "xs": (
     min-width: 461px,
   ),
