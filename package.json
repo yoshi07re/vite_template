@@ -9,7 +9,7 @@
     "preview": "vite preview",
     "stylelint": "stylelint --ignore-path .gitignore \"src/**/*.+(css|scss)\"",
     "stylelintfix": "npm run stylelint -- --fix",
-    "format": "prettier --write \"**/*.+(js|json|yml|scss|css)\""
+    "format": "prettier --write \"**/*.+(js|json|yml|scss|css|json)\""
   },
   "devDependencies": {
     "autoprefixer": "^10.4.8",
