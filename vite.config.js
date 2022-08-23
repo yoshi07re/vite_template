@@ -1,4 +1,4 @@
-import { resolve } from "path";
+import { resolve } from "node:path";
 import { defineConfig } from "vite";
 import handlebars from "vite-plugin-handlebars";
 
