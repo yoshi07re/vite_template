@@ -65,6 +65,7 @@
       "unicorn/prefer-module": "off",
       "quotes": "off",
       "object-curly-spacing": "off",
+      "padding-line-between-statements":"off",
     }
   }
 }

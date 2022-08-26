@@ -26,7 +26,16 @@ export default defineConfig({
     rollupOptions: {
       output: {
         entryFileNames: "assets/[name].js",
-        assetFileNames: "assets/[name][extname]",
+        // AssetFileNames: "assets/[name][extname]",
+        assetFileNames({name}) {
+          if (/\.(jpe?g|png|gif|svg)$/.test(name ?? '')) {
+            return 'assets/img/[name].[hash][extname]';
+          }
+          if (/\.css$/.test(name ?? '')) {
+            return 'assets/css/[name].[hash][extname]';
+          }
+          return 'assets/[name].[hash][extname]';
+        },
       },
     },
   },
