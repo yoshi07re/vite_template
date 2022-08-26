@@ -1,0 +1,7 @@
+{
+  "recommendations": [
+    "stylelint.vscode-stylelint",
+    "samverschueren.linter-xo",
+    "esbenp.prettier-vscode"
+  ]
+}
