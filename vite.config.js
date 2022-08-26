@@ -1,5 +1,5 @@
-import {resolve} from "node:path";
-import {defineConfig} from "vite";
+import { resolve } from "node:path";
+import { defineConfig } from "vite";
 import handlebars from "vite-plugin-handlebars";
 
 const pageData = {

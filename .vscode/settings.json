@@ -48,20 +48,23 @@
   // lint XO
   // ==========================
   "xo.enable": true,
-	"xo.format.enable": true,
-	"[javascript]": {
-		"editor.defaultFormatter": "samverschueren.linter-xo",
+  "xo.format.enable": true,
+  "[javascript]": {
+    "editor.defaultFormatter": "samverschueren.linter-xo",
     "editor.formatOnSave": true
-	},
-	"[typescript]": {
-		"editor.defaultFormatter": "samverschueren.linter-xo",
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "samverschueren.linter-xo",
     "editor.formatOnSave": true
-	},
+  },
   "xo.options": {
-		"rules": {
-		},
+    // "prettier": true,
     "space": true,
-    "prettier": true,
     "useTabs": false,
-	}
+    "rules": {
+      "unicorn/prefer-module": "off",
+      "quotes": "off",
+      "object-curly-spacing": "off",
+    }
+  }
 }
