@@ -9,6 +9,8 @@
     "preview": "vite preview",
     "stylelint": "stylelint --ignore-path .gitignore \"src/**/*.+(css|scss)\"",
     "stylelintfix": "npm run stylelint -- --fix",
+    "xo": "xo",
+    "xo:fix": "xo --fix",
     "format": "prettier --write \"**/*.+(js|json|yml|scss|css|json)\""
   },
   "devDependencies": {
@@ -29,6 +31,7 @@
     "stylelint-prettier": "^2.0.0",
     "typescript": "^4.7.4",
     "vite": "^3.0.0",
-    "vite-plugin-handlebars": "^1.6.0"
+    "vite-plugin-handlebars": "^1.6.0",
+    "xo": "^0.52.1"
   }
 }

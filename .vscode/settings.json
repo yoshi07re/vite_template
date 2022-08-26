@@ -1,5 +1,5 @@
 {
-   // stylelint
+   // lint stylelint
   // ==========================
   "stylelint.enable": true,
   "stylelint.configBasedir": ".",
@@ -12,4 +12,23 @@
     "source.fixAll.eslint": true,
     "source.fixAll.stylelint": true
   },
+   // lint XO
+  // ==========================
+  "xo.enable": true,
+	"xo.format.enable": true,
+	"[javascript]": {
+		"editor.defaultFormatter": "samverschueren.linter-xo",
+    "editor.formatOnSave": true
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "samverschueren.linter-xo",
+    "editor.formatOnSave": true
+	},
+  "xo.options": {
+		"rules": {
+		},
+    "space": true,
+    "prettier": true,
+    "useTabs": false,
+	}
 }
