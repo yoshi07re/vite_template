@@ -28,7 +28,7 @@
 
 // 使い方
 // .photo {
-//   @include aspect-ratio(16, 9);
+//   @include.g aspect-ratio(16, 9);
 
 //   & > .image {
 //     @include object-fit(cover);
