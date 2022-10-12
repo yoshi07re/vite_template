@@ -1,18 +1,11 @@
-@function vw($px, $base: 375px) {
-  $value: $px;
+@use "sass:math";
 
-  // 単位がpx以外の場合は警告を出してそのまま返す
-  @if (unit($px) != "px") {
-    @warn 'vw()の引数にpx以外の値を指定しても計算できません';
-    @return $value;
-  }
-
-  $value: (strip-unit($px) / strip-unit($base)) * 100vw;
-
-  @return $value;
+@function vw($size, $viewport: 375) {
+  $rate: calc(math.div(100, $viewport));
+  @return $rate * $size * 1vw;
 }
 
 // 使い方
 // .hoge {
-//   width: g.vw(40px);
+//   font-size: g.vw(40px, 768px);
 // }

@@ -16,10 +16,10 @@
 // 使い方
 // .image {
 //   &.-image1 {
-//     @include.g object-fit(cover);
+//     @include g.object-fit(cover);
 //   }
 
 //   &.-image2 {
-//     @include.g object-fit(contain, top center);
+//     @include g.object-fit(contain, top center);
 //   }
 // }
