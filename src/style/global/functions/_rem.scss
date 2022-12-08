@@ -1,0 +1,10 @@
+@use "sass:math";
+
+@function rem($px) {
+  @return math.div($px, 16) * 1rem;
+}
+
+// 使い方
+// .hoge {
+//   font-size: rem(14);
+// }
